@@ -34,6 +34,8 @@ public class CustomerService {
     }
 
     public Customer searchCustomer(String name) {
-        return customerRepository.findByName(name).orElse(null);
+        List<Customer> customers = customerRepository.findByName(name);
+        // return customerRepository.findByName(name).orElse(null);
+        return customers.isEmpty() ? null : customers.get(0);
     }
 }

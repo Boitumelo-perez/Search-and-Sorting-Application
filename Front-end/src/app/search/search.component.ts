@@ -13,7 +13,8 @@ export class SearchComponent {
   constructor(private http: HttpClient) {}
 
   searchCustomer() {
-    this.http.get(`http://localhost:8080/api/search?term=${this.searchTerm}`)
+    // this.http.get(`http://localhost:8080/api/search?term=${this.searchTerm}`)
+    this.http.get('http://localhost:8080/api/search?term=${this.searchTerm}')
       .subscribe((result: any) => {
         this.searchResult = result;
       });

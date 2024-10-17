@@ -1,1 +1,9 @@
-<p>search works!</p>
+<h2>Search Customer</h2>
+<input [(ngModel)]="searchTerm" placeholder="Enter customer name">
+<button (click)="searchCustomer()">Search</button>
+
+<div *ngIf="searchResult">
+  <h3>Customer Found:</h3>
+  <p>{{ searchResult.name }} - {{ searchResult.email }}</p>
+  <p>Position: {{ searchResult.index }}</p>
+</div>

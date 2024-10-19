@@ -319,6 +319,15 @@
 
 <router-outlet /> -->
 
-<app-file-upload></app-file-upload>
+<!-- <app-file-upload></app-file-upload>
 <app-search></app-search>
 <app-customer-list></app-customer-list>
+<router-outlet></router-outlet> -->
+
+<nav>
+  <a routerLink="/upload">Upload Customers</a> |
+  <a routerLink="/search">Search Customer</a> |
+  <a routerLink="/list">Customer List</a>
+</nav>
+
+<router-outlet></router-outlet>

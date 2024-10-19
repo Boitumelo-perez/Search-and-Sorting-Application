@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<Search-Sort-Back-end>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.Search.Sort.Back_end.Application",
+            "projectName": "Search-Sort-Back-end",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -41,6 +41,7 @@ export class FileUploadComponent {
 
   onUpload(): void {
     if (this.selectedFile) {
+      console.log('Upload button clicked');
       this.customerService.uploadFile(this.selectedFile).subscribe(
         (response) => {
           this.uploadResponse = 'File uploaded successfully!';

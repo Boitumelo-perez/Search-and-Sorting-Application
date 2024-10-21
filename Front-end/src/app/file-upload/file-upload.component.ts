@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CustomerService } from '../customer.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-file-upload',
@@ -52,7 +53,13 @@ export class FileUploadComponent {
       );
     }
   }
-  uploadFile(): void {
-    console.log('File upload initiated');
+  // uploadFile(): void {
+  //   console.log('File upload initiated');
+  // }
+  uploadFile(file: File): Observable<string> {
+    const formData: FormData = new FormData();
+    formData.append('file', file);
+
+    return this.http.post(`${this.apiUrl}/upload`, formData, { responseType: 'text' });
   }
 }

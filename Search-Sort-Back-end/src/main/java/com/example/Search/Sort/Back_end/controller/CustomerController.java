@@ -11,7 +11,7 @@ import com.example.Search.Sort.Back_end.service.CustomerService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/customers")
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
@@ -40,4 +40,9 @@ public class CustomerController {
     public List<Customer> listAllCustomers() {
         return customerService.getAllCustomers();
     }
+
+    // @PostMapping
+    // public Customer createCustomer(@RequestBody Customer customer) {
+    //     return customerService.saveCustomer(customer);
+    // }
 }

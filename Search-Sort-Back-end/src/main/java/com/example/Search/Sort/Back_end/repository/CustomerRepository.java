@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 // public class CustomerRepository extends JpaRepository<Customer, Long> {
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
-    /*Optional<Customer> findByName(String name); */
+    // Optional<Customer> findByName(String name);
     List<Customer> findByName(String name);
 }

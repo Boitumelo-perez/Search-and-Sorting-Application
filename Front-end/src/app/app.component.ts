@@ -1,8 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { ApiService } from './services/api.service';
-// import { CustomerListComponent } from './customer-list/customer-list.component';
-// import { FileUploadComponent } from './file-upload/file-upload.component';
-// import { SearchComponent } from './search/search.component';
 
 @Component({
   selector: 'app-root',
@@ -16,8 +13,8 @@ export class AppComponent implements OnInit {
   constructor(private apiService:ApiService) {}
 
   ngOnInit(): void {
-      this.apiService.getGreeting().subscribe((response) => {
-        this.message = response;
-      });
+      // this.apiService.getGreeting().subscribe((response: string) => {
+      //   this.message = response;
+      // });
   }
 }

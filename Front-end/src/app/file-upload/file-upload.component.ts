@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CustomerService } from '../customer.service';
 import { Observable } from 'rxjs';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-file-upload',
@@ -30,11 +31,27 @@ import { Observable } from 'rxjs';
 //   }
 // }
 
-export class FileUploadComponent {
+export class FileUploadComponent /*implements OnInit */{
   selectedFile: File | null = null;
   uploadResponse: string = '';
+  // apiUrl: string = 'http://localhost:8080/api';
+  apiUrl: string = '';
 
-  constructor(private customerService: CustomerService) {}
+  constructor(private http: HttpClient, private customerService: CustomerService) {}
+
+  // ngOnInit() {
+  //     this.customerService.getApiUrl().subscribe((customer: any) => {
+  //       this.apiUrl = customer.apiUrl;
+  //     });
+  // }
+
+//   ngOnInit() {
+//     console.log(this.customerService.getApiUrl());  // Log to check the return type
+//     this.customerService.getApiUrl().subscribe((customer: any) => {
+//       this.apiUrl = customer.apiUrl;
+//     });
+//  }
+ 
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files[0];
@@ -53,12 +70,11 @@ export class FileUploadComponent {
       );
     }
   }
-  // uploadFile(): void {
-  //   console.log('File upload initiated');
-  // }
+
   uploadFile(file: File): Observable<string> {
     const formData: FormData = new FormData();
     formData.append('file', file);
+    console.log('File upload initiated');
 
     return this.http.post(`${this.apiUrl}/upload`, formData, { responseType: 'text' });
   }

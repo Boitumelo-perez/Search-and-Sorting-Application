@@ -1,7 +1,7 @@
-##Search and Sorting Application
--This is a cutomer management system that hass an input file field(.txt or .csv)and reads/loads the content into memory and saves it into the Database, then sort inputs alphabetically searches for them and produces them also show a list
+## Search and Sorting Application
+This is a cutomer management system that hass an input file field(.txt or .csv)and reads/loads the content into memory and saves it into the Database, then sort inputs alphabetically searches for them and produces them also show a list
 
-  ##Features
+  ## Features
   - Uploades cutomer detailes file in .txt or .csv file and reads them.
   - Reads customer data and displays them.
   - Can search for a customer thats on the DB by either name or surname.

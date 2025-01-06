@@ -10,7 +10,7 @@ This is a cutomer management system that hass an input file field(.txt or .csv) 
   ## Technologies and tools used
   - Angular framework for frontend.
   - Spring framework for backend.
-  - Docker for the databse that the system uses.
+  - Docker for the database that the system uses.
   - Swagger was used to test out the functionality before an actual customer file.
 
  ## User Interface

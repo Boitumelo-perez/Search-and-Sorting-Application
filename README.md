@@ -7,7 +7,7 @@ This is a cutomer management system that hass an input file field(.txt or .csv) 
   - Can search for a customer thats on the DB by either name or surname.
   - Sorts the customers in the system alphabetically by name.
 
-  ## TEchnologies and tools used
+  ## Technologies and tools used
   - Angular framework for frontend.
   - Spring framework for backend.
   - Docker for the databse that the system uses.
